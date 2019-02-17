@@ -14,7 +14,7 @@ tools:context="com.example.android.miwok.MainActivity">
     style="@style/CategoryStyle"
     android:background="@color/category_numbers"
     android:text="@string/category_numbers"
-    />
+    android:onClick="openNumbersList"/>
 
 <TextView
     android:id="@+id/family"
