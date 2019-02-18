@@ -22,6 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, NumbersActivity.class);
         startActivity(intent);
-        
+
     }
 }
