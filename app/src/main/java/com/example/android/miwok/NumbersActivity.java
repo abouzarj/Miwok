@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.constraint.solver.ArrayLinkedVariables;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -15,27 +17,27 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         ArrayList<String> words = new ArrayList<String>();
-        words.add("One");
-        words.add("Two");
-        words.add("Three");
-        words.add("Four");
-        words.add("Five");
-        words.add("Six");
-        words.add("Seven");
-        words.add("Eight");
-        words.add("Nine");
-        words.add("Ten");
+        words.add("one");
+        words.add("two");
+        words.add("three");
+        words.add("four");
+        words.add("five");
+        words.add("six");
+        words.add("seven");
+        words.add("eight");
+        words.add("nine");
+        words.add("ten");
 
-        Log.v("NumbersActivity","Words at index 0 : " + words.get(0));
-        Log.v("NumbersActivity","Words at index 1 : " + words.get(1));
-        Log.v("NumbersActivity","Words at index 2 : " + words.get(2));
-        Log.v("NumbersActivity","Words at index 3 : " + words.get(3));
-        Log.v("NumbersActivity","Words at index 4 : " + words.get(4));
-        Log.v("NumbersActivity","Words at index 5 : " + words.get(5));
-        Log.v("NumbersActivity","Words at index 6 : " + words.get(6));
-        Log.v("NumbersActivity","Words at index 7 : " + words.get(7));
-        Log.v("NumbersActivity","Words at index 8 : " + words.get(8));
-        Log.v("NumbersActivity","Words at index 9 : " + words.get(9));
+        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
 
+        int index = 0;
+
+        while (index < words.size())
+        {
+            TextView wordView = new TextView(this);
+            wordView.setText(words.get(index));
+            rootView.addView(wordView);
+            index++;
+        }
     }
 }
