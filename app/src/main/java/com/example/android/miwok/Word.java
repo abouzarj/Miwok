@@ -17,6 +17,9 @@ public class Word {
     /** Constant value that represents no image was provided for this word */
     private static final int NO_IMAGE_PROVIDED = -1;
 
+    /** Audio resource ID **/
+    private int mAudioResourceId;
+
     /**
      * Create a new Word object.
      *
@@ -60,6 +63,7 @@ public class Word {
         return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 
-
-
+    public int getmAudioResourceId() {
+        return mAudioResourceId;
+    }
 }
